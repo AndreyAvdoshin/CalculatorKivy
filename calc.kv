@@ -4,18 +4,25 @@
     rows: 3
 
     AnchorLayout:
+        padding: 3
         anchor_y: 'top'
-        size_hint: 1, 0.15
+        size_hint: 1, 0.20
 
-        Label:
+        MDLabel:
             id: 'text_label'
             text: '0'
+            halign: 'left'
+            font_size: '50sp'
+
 
     GridLayout:
         cols: 4
+        spacing: 3
+        padding: 3
 
         Button:
             text: '7'
+            font_size: '30sp'
 
         Button:
             text: '8'
@@ -63,6 +70,7 @@
             text: '+'
 
     BoxLayout:
+        padding: 3
         orientation: 'vertical'
         size_hint: 1, 0.15
         Button:

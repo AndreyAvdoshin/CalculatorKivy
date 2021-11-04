@@ -1,5 +1,8 @@
 from kivymd.app import MDApp
 from kivy.uix.gridlayout import GridLayout
+from kivy.core.window import Window
+
+Window.size = (300, 450)
 
 class Container(GridLayout):
     pass
