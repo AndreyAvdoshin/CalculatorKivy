@@ -61,6 +61,7 @@ class Container(GridLayout):
 class CalcApp(MDApp):
     def build(self):
         self.theme_cls.theme_style = "Light"
+        self.title = 'Калькулятор'
         return Container()
 
 
