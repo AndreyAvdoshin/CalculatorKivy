@@ -5,7 +5,16 @@ from kivy.core.window import Window
 Window.size = (300, 450)
 
 class Container(GridLayout):
-    pass
+
+    def clear(self):
+        self.ids.text_label.text = ''
+
+
+    def press_button(self, button):
+        if self.ids.text_label.text == '0':
+            self.ids.text_label.text = ''
+
+        self.ids.text_label.text += str(button)
 
 
 class CalcApp(MDApp):

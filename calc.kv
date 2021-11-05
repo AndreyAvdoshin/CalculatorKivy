@@ -1,18 +1,22 @@
 #:kivy 2.0.0
 
+<MyButton@Button>:
+    font_size: '30sp'
+
 <Container>:
     rows: 3
 
     AnchorLayout:
-        padding: 3
         anchor_y: 'top'
         size_hint: 1, 0.20
+        padding: [3, 3, 3, 0]
 
-        MDLabel:
-            id: 'text_label'
+        TextInput:
+            id: text_label
             text: '0'
             halign: 'left'
             font_size: '50sp'
+            multiline: 'False'
 
 
     GridLayout:
@@ -20,58 +24,77 @@
         spacing: 3
         padding: 3
 
-        Button:
+        MyButton:
             text: '7'
-            font_size: '30sp'
+            on_press:
+                root.press_button(7)
 
-        Button:
+        MyButton:
             text: '8'
+            on_press:
+                root.press_button(8)
 
-        Button:
+        MyButton:
             text: '9'
+            on_press:
+                root.press_button(9)
 
-        Button:
+        MyButton:
             text: '*'
 
-        Button:
+        MyButton:
             text: '4'
+            on_press:
+                root.press_button(4)
 
-        Button:
+        MyButton:
             text: '5'
+            on_press:
+                root.press_button(5)
 
-        Button:
+        MyButton:
             text: '6'
+            on_press:
+                root.press_button(6)
 
-        Button:
+        MyButton:
             text: '/'
 
-        Button:
+        MyButton:
             text: '1'
+            on_press:
+                root.press_button(1)
 
-        Button:
+        MyButton:
             text: '2'
+            on_press:
+                root.press_button(2)
 
-        Button:
+        MyButton:
             text: '3'
+            on_press:
+                root.press_button(3)
 
-        Button:
+        MyButton:
             text: '-'
 
-        Button:
+        MyButton:
             text: '0'
 
-        Button:
+        MyButton:
             text: '.'
 
-        Button:
+        MyButton:
             text: 'AC'
+            on_press:
+                root.clear()
 
-        Button:
+        MyButton:
             text: '+'
 
     BoxLayout:
         padding: 3
         orientation: 'vertical'
         size_hint: 1, 0.15
-        Button:
+        MyButton:
             text:'='
