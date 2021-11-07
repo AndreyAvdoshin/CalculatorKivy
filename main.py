@@ -15,7 +15,6 @@ class Container(GridLayout):
             formula += button
             self.ids.text_label.text = ''
             result = False
-        print(formula)
 
 
     def press_button(self, button):
@@ -43,7 +42,6 @@ class Container(GridLayout):
         else:
             self.ids.text_label.text += str(button)
             formula += str(button)
-        print(formula)
 
 
     def equal(self):
